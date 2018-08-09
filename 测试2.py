@@ -74,5 +74,6 @@ for i, grid in enumerate(grids):
                 break
             time.sleep(1)
     break  # 后续的格子不再处理
+    #测试github是否可用
 conn.commit()
 conn.close()

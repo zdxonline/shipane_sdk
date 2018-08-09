@@ -1,0 +1,248 @@
+2018-08-09 14:54:21,045 scheduler.py[line:39] INFO    Config path: C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\conf\scheduler.ini
+2018-08-09 14:54:21,215 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:54:21,216 update_info_job.py[line:14] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:54:21,217 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:54:21,218 grid_job.py[line:16] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:54:21,219 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:54:21,220 scheduler.py[line:73] WARNING ConvertibleBonds-Job is not enabled
+2018-08-09 14:54:21,221 scheduler.py[line:73] WARNING Repo-Job is not enabled
+2018-08-09 14:54:21,222 scheduler.py[line:73] WARNING Batch-Job is not enabled
+2018-08-09 14:54:21,223 scheduler.py[line:73] WARNING JoinQuant-1-FollowingJob is not enabled
+2018-08-09 14:54:21,225 scheduler.py[line:73] WARNING JoinQuantArena-1-SyncJob is not enabled
+2018-08-09 14:54:21,225 scheduler.py[line:73] WARNING RiceQuant-1-FollowingJob is not enabled
+2018-08-09 14:54:21,226 scheduler.py[line:73] WARNING Uqer-1-FollowingJob is not enabled
+2018-08-09 14:54:21,227 scheduler.py[line:73] WARNING Guorn-1-SyncJob is not enabled
+2018-08-09 14:54:21,228 base.py[line:867] INFO    Added job "NewStocks-Job" to job store "default"
+2018-08-09 14:54:21,229 base.py[line:867] INFO    Added job "UpdateInfoJob-Job" to job store "default"
+2018-08-09 14:54:21,230 base.py[line:867] INFO    Added job "GridJob-Job" to job store "default"
+2018-08-09 14:54:21,230 base.py[line:159] INFO    Scheduler started
+2018-08-09 14:55:00,013 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='*/1', second='0'], next run at: 2018-08-09 14:56:00 CST)" (scheduled at 2018-08-09 14:55:00+08:00)
+2018-08-09 14:55:00,046 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=
+2018-08-09 14:55:00,062 client.py[line:286] ERROR   Response:
+403 Forbidden
+key不匹配
+2018-08-09 14:55:00,066 grid_job.py[line:103] ERROR   客户端[client1]网格任务失败
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 34, in __call__
+    orders = self._client.get_orders(client)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\client.py", line 109, in get_orders
+    response = self.__send_request(request, timeout)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\client.py", line 271, in __send_request
+    response.raise_for_status()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\requests\models.py", line 935, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 403 Client Error: Forbidden for url: http://localhost:8888/orders?status=&client=account%3A666628719640&key=
+2018-08-09 14:55:00,076 base.py[line:144] INFO    Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='*/1', second='0'], next run at: 2018-08-09 14:56:00 CST)" executed successfully
+2018-08-09 14:55:48,070 base.py[line:191] INFO    Scheduler has been shut down
+2018-08-09 14:56:49,342 scheduler.py[line:39] INFO    Config path: C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\conf\scheduler.ini
+2018-08-09 14:56:49,536 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:56:49,536 update_info_job.py[line:14] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:56:49,538 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:56:49,538 grid_job.py[line:16] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:56:49,540 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:56:49,540 scheduler.py[line:73] WARNING ConvertibleBonds-Job is not enabled
+2018-08-09 14:56:49,541 scheduler.py[line:73] WARNING Repo-Job is not enabled
+2018-08-09 14:56:49,542 scheduler.py[line:73] WARNING Batch-Job is not enabled
+2018-08-09 14:56:49,543 scheduler.py[line:73] WARNING JoinQuant-1-FollowingJob is not enabled
+2018-08-09 14:56:49,544 scheduler.py[line:73] WARNING JoinQuantArena-1-SyncJob is not enabled
+2018-08-09 14:56:49,545 scheduler.py[line:73] WARNING RiceQuant-1-FollowingJob is not enabled
+2018-08-09 14:56:49,546 scheduler.py[line:73] WARNING Uqer-1-FollowingJob is not enabled
+2018-08-09 14:56:49,547 scheduler.py[line:73] WARNING Guorn-1-SyncJob is not enabled
+2018-08-09 14:56:49,548 base.py[line:867] INFO    Added job "NewStocks-Job" to job store "default"
+2018-08-09 14:56:49,549 base.py[line:867] INFO    Added job "UpdateInfoJob-Job" to job store "default"
+2018-08-09 14:56:49,550 base.py[line:867] INFO    Added job "GridJob-Job" to job store "default"
+2018-08-09 14:56:49,551 base.py[line:159] INFO    Scheduler started
+2018-08-09 14:57:44,547 base.py[line:191] INFO    Scheduler has been shut down
+2018-08-09 14:57:48,878 scheduler.py[line:39] INFO    Config path: C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\conf\scheduler.ini
+2018-08-09 14:57:49,064 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:57:49,065 update_info_job.py[line:14] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:57:49,066 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:57:49,068 grid_job.py[line:16] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:57:49,069 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:57:49,070 scheduler.py[line:73] WARNING ConvertibleBonds-Job is not enabled
+2018-08-09 14:57:49,071 scheduler.py[line:73] WARNING Repo-Job is not enabled
+2018-08-09 14:57:49,071 scheduler.py[line:73] WARNING Batch-Job is not enabled
+2018-08-09 14:57:49,073 scheduler.py[line:73] WARNING JoinQuant-1-FollowingJob is not enabled
+2018-08-09 14:57:49,074 scheduler.py[line:73] WARNING JoinQuantArena-1-SyncJob is not enabled
+2018-08-09 14:57:49,075 scheduler.py[line:73] WARNING RiceQuant-1-FollowingJob is not enabled
+2018-08-09 14:57:49,076 scheduler.py[line:73] WARNING Uqer-1-FollowingJob is not enabled
+2018-08-09 14:57:49,077 scheduler.py[line:73] WARNING Guorn-1-SyncJob is not enabled
+2018-08-09 14:57:49,078 base.py[line:867] INFO    Added job "NewStocks-Job" to job store "default"
+2018-08-09 14:57:49,079 base.py[line:867] INFO    Added job "UpdateInfoJob-Job" to job store "default"
+2018-08-09 14:57:49,079 base.py[line:867] INFO    Added job "GridJob-Job" to job store "default"
+2018-08-09 14:57:49,080 base.py[line:159] INFO    Scheduler started
+2018-08-09 14:59:24,739 base.py[line:191] INFO    Scheduler has been shut down
+2018-08-09 14:59:27,998 scheduler.py[line:39] INFO    Config path: C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\conf\scheduler.ini
+2018-08-09 14:59:28,165 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:59:28,166 update_info_job.py[line:14] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:59:28,167 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:59:28,167 grid_job.py[line:16] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 14:59:28,169 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 14:59:28,169 scheduler.py[line:73] WARNING ConvertibleBonds-Job is not enabled
+2018-08-09 14:59:28,170 scheduler.py[line:73] WARNING Repo-Job is not enabled
+2018-08-09 14:59:28,171 scheduler.py[line:73] WARNING Batch-Job is not enabled
+2018-08-09 14:59:28,172 scheduler.py[line:73] WARNING JoinQuant-1-FollowingJob is not enabled
+2018-08-09 14:59:28,173 scheduler.py[line:73] WARNING JoinQuantArena-1-SyncJob is not enabled
+2018-08-09 14:59:28,174 scheduler.py[line:73] WARNING RiceQuant-1-FollowingJob is not enabled
+2018-08-09 14:59:28,175 scheduler.py[line:73] WARNING Uqer-1-FollowingJob is not enabled
+2018-08-09 14:59:28,175 scheduler.py[line:73] WARNING Guorn-1-SyncJob is not enabled
+2018-08-09 14:59:28,177 base.py[line:867] INFO    Added job "NewStocks-Job" to job store "default"
+2018-08-09 14:59:28,178 base.py[line:867] INFO    Added job "UpdateInfoJob-Job" to job store "default"
+2018-08-09 14:59:28,179 base.py[line:867] INFO    Added job "GridJob-Job" to job store "default"
+2018-08-09 14:59:28,179 base.py[line:159] INFO    Scheduler started
+2018-08-09 15:00:01,003 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:11 CST)" (scheduled at 2018-08-09 15:00:01+08:00)
+2018-08-09 15:00:01,035 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=********
+2018-08-09 15:00:01,411 client.py[line:284] INFO    Response:
+200 OK
+{"count":25,"dataTable":{"columns":["委托日期","证券代码","证券名称","操作","委托价格","委托数量","委托时间","成交数量","成交均价","合同编号","交易市场","股东帐户","备注"],"rows":[["20180809","159915","创业板","卖出","1.446","1400","08:50:43","0","0.000","390","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.417","1400","08:51:10","1400","1.417","392","深圳Ａ","0237889997","已成(买卖)"],["20180809","159915","创业板","买入","1.361","1500","08:52:16","0","0.000","399","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.334","1500","08:52:40","0","0.000","400","深圳Ａ","0237889997","已报(买卖)"],["20180809","510300","300ETF","卖出","3.473","600","08:53:17","0","0.000","401","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.336","600","08:53:56","0","0.000","403","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.269","600","08:54:23","0","0.000","404","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","卖出","5.311","400","08:54:46","400","5.311","405","上海Ａ","A171193633","已成(买卖)"],["20180809","510500","500ETF","卖出","5.419","400","08:55:00","0","0.000","407","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","5.101","400","08:55:29","0","0.000","408","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","4.999","400","08:55:42","0","0.000","409","上海Ａ","A171193633","已报(买卖)"],["20180809","601088","中国神华","卖出","18.810","200","08:56:21","0","0.000","410","上海Ａ","A171193633","已报(买卖)"],["20180809","000402","金 融 街","卖出","7.440","700","08:57:01","0","0.000","411","深圳Ａ","0237889997","已报(买卖)"],["20180809","600219","南山铝业","卖出","2.920","1000","08:57:28","0","0.000","412","上海Ａ","A171193633","已报(买卖)"],["20180809","110044","广电转债","卖出","95.000","4","08:58:18","4","95.000","414","上海Ａ","A171193633","已成(买卖)"],["20180809","510880","红利ETF","买入","2.626","800","09:07:51","0","0.000","454","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.481","800","09:22:46","0","0.000","544","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","买入","1.389","1500","10:39:36","0","0.000","7559","深圳Ａ","0237889997","已报(买卖)"],["20180809","510500","500ETF","买入","5.205","400","10:50:18","0","0.000","8086","上海Ａ","A171193633","已报(买卖)"],["20180809","510880","红利ETF","买入","2.668","800","10:51:51","0","0.000","8168","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.532","800","10:54:26","0","0.000","8292","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:10:58","0","0.000","12146","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:12:48","0","0.000","12210","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:13:58","0","0.000","12249","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.380","100","14:23:49","0","0.000","12646","深圳Ａ","0237889997","已报(买卖)"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:00:01"}
+2018-08-09 15:00:01,536 grid_job.py[line:40] INFO    159915 current price is 1.427
+2018-08-09 15:00:01,539 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=392
+2018-08-09 15:00:01,543 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=405
+2018-08-09 15:00:01,547 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=414
+2018-08-09 15:00:01,553 grid_job.py[line:103] ERROR   客户端[client1]网格任务失败
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 67, in __call__
+    self._logger('%s is on trading' % grid[0])
+TypeError: 'RootLogger' object is not callable
+2018-08-09 15:00:01,560 base.py[line:144] INFO    Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:11 CST)" executed successfully
+2018-08-09 15:00:11,005 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:21 CST)" (scheduled at 2018-08-09 15:00:11+08:00)
+2018-08-09 15:00:11,018 base.py[line:131] ERROR   Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:21 CST)" raised an exception
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 21, in __call__
+    self._logger('something is wrong ,please check it fast')
+TypeError: 'RootLogger' object is not callable
+2018-08-09 15:00:21,005 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:31 CST)" (scheduled at 2018-08-09 15:00:21+08:00)
+2018-08-09 15:00:21,008 base.py[line:131] ERROR   Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:31 CST)" raised an exception
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 21, in __call__
+    self._logger('something is wrong ,please check it fast')
+TypeError: 'RootLogger' object is not callable
+2018-08-09 15:00:31,005 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:31 CST)" (scheduled at 2018-08-09 15:00:31+08:00)
+2018-08-09 15:00:31,006 base.py[line:131] ERROR   Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:31 CST)" raised an exception
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 21, in __call__
+    self._logger('something is wrong ,please check it fast')
+TypeError: 'RootLogger' object is not callable
+2018-08-09 15:00:41,004 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:51 CST)" (scheduled at 2018-08-09 15:00:41+08:00)
+2018-08-09 15:00:41,007 base.py[line:131] ERROR   Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-09 15:00:51 CST)" raised an exception
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 21, in __call__
+    self._logger('something is wrong ,please check it fast')
+TypeError: 'RootLogger' object is not callable
+2018-08-09 15:00:51,006 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-10 09:00:01 CST)" (scheduled at 2018-08-09 15:00:51+08:00)
+2018-08-09 15:00:51,010 base.py[line:131] ERROR   Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-15', minute='0', second='1/10'], next run at: 2018-08-10 09:00:01 CST)" raised an exception
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\apscheduler\executors\base.py", line 125, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\jobs\grid_job.py", line 21, in __call__
+    self._logger('something is wrong ,please check it fast')
+TypeError: 'RootLogger' object is not callable
+2018-08-09 15:02:00,008 base.py[line:123] INFO    Running job "UpdateInfoJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='15', minute='2', second='0'], next run at: 2018-08-10 15:02:00 CST)" (scheduled at 2018-08-09 15:02:00+08:00)
+2018-08-09 15:02:00,013 client.py[line:277] INFO    Request:
+GET /positions?client=account%3A666628719640&key=********
+2018-08-09 15:02:00,854 client.py[line:284] INFO    Response:
+200 OK
+{"subAccounts":{"人民币":{"冻结金额":0,"可取金额":8066.9700000000003,"可用金额":8066.9700000000003,"总 资 产":168098.59,"现金资产":23855.009999999998,"股票市值":135430.79999999999,"资金余额":15948.889999999999}},"count":8,"dataTable":{"columns":["证券代码","证券名称","股票余额","可用余额","冻结数量","成本价","保本价","市价","盈亏比(%)","盈亏","市值","交易市场","股东帐户","在途数量"],"rows":[["110044","广电转债","0","0","0","100.000","100.000","95.120","-4.88","-201.050","0.000","上海Ａ","A171193633","0"],["510300","300ETF","5700","5100","600","3.844","3.844","3.458","-10.04","-2197.430","19710.600","上海Ａ","A171193633","0"],["510500","500ETF","8700","8300","400","5.750","5.750","5.316","-7.55","-3771.710","46249.200","上海Ａ","A171193633","0"],["510880","红利ETF","7600","7600","0","2.917","2.917","2.715","-6.92","-1538.730","20634.000","上海Ａ","A171193633","0"],["600219","南山铝业","2100","1100","1000","3.337","3.337","2.800","-16.09","-1126.980","5880.000","上海Ａ","A171193633","0"],["601088","中国神华","200","0","200","21.539","21.539","18.290","-15.08","-649.890","3658.000","上海Ａ","A171193633","0"],["000402","金 融 街","1400","700","700","10.058","10.058","7.190","-28.51","-4015.390","10066.000","深圳Ａ","0237889997","0"],["159915","创业板","20500","18800","1700","1.560","1.560","1.426","-8.59","-2752.460","29233.000","深圳Ａ","0237889997","0"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:02:00"}
+2018-08-09 15:02:00,877 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=********
+2018-08-09 15:02:01,044 client.py[line:284] INFO    Response:
+200 OK
+{"count":25,"dataTable":{"columns":["委托日期","证券代码","证券名称","操作","委托价格","委托数量","委托时间","成交数量","成交均价","合同编号","交易市场","股东帐户","备注"],"rows":[["20180809","159915","创业板","卖出","1.446","1400","08:50:43","0","0.000","390","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.417","1400","08:51:10","1400","1.417","392","深圳Ａ","0237889997","已成(买卖)"],["20180809","159915","创业板","买入","1.361","1500","08:52:16","0","0.000","399","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.334","1500","08:52:40","0","0.000","400","深圳Ａ","0237889997","已报(买卖)"],["20180809","510300","300ETF","卖出","3.473","600","08:53:17","0","0.000","401","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.336","600","08:53:56","0","0.000","403","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.269","600","08:54:23","0","0.000","404","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","卖出","5.311","400","08:54:46","400","5.311","405","上海Ａ","A171193633","已成(买卖)"],["20180809","510500","500ETF","卖出","5.419","400","08:55:00","0","0.000","407","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","5.101","400","08:55:29","0","0.000","408","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","4.999","400","08:55:42","0","0.000","409","上海Ａ","A171193633","已报(买卖)"],["20180809","601088","中国神华","卖出","18.810","200","08:56:21","0","0.000","410","上海Ａ","A171193633","已报(买卖)"],["20180809","000402","金 融 街","卖出","7.440","700","08:57:01","0","0.000","411","深圳Ａ","0237889997","已报(买卖)"],["20180809","600219","南山铝业","卖出","2.920","1000","08:57:28","0","0.000","412","上海Ａ","A171193633","已报(买卖)"],["20180809","110044","广电转债","卖出","95.000","4","08:58:18","4","95.000","414","上海Ａ","A171193633","已成(买卖)"],["20180809","510880","红利ETF","买入","2.626","800","09:07:51","0","0.000","454","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.481","800","09:22:46","0","0.000","544","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","买入","1.389","1500","10:39:36","0","0.000","7559","深圳Ａ","0237889997","已报(买卖)"],["20180809","510500","500ETF","买入","5.205","400","10:50:18","0","0.000","8086","上海Ａ","A171193633","已报(买卖)"],["20180809","510880","红利ETF","买入","2.668","800","10:51:51","0","0.000","8168","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.532","800","10:54:26","0","0.000","8292","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:10:58","0","0.000","12146","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:12:48","0","0.000","12210","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:13:58","0","0.000","12249","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.380","100","14:23:49","0","0.000","12646","深圳Ａ","0237889997","已报(买卖)"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:02:01"}
+2018-08-09 15:02:01,084 base.py[line:144] INFO    Job "UpdateInfoJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='15', minute='2', second='0'], next run at: 2018-08-10 15:02:00 CST)" executed successfully
+2018-08-09 15:04:59,625 base.py[line:191] INFO    Scheduler has been shut down
+2018-08-09 15:05:03,321 scheduler.py[line:39] INFO    Config path: C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\conf\scheduler.ini
+2018-08-09 15:05:03,491 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 15:05:03,492 update_info_job.py[line:14] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 15:05:03,493 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 15:05:03,493 grid_job.py[line:16] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 15:05:03,494 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 15:05:03,494 scheduler.py[line:73] WARNING ConvertibleBonds-Job is not enabled
+2018-08-09 15:05:03,495 scheduler.py[line:73] WARNING Repo-Job is not enabled
+2018-08-09 15:05:03,496 scheduler.py[line:73] WARNING Batch-Job is not enabled
+2018-08-09 15:05:03,496 scheduler.py[line:73] WARNING JoinQuant-1-FollowingJob is not enabled
+2018-08-09 15:05:03,497 scheduler.py[line:73] WARNING JoinQuantArena-1-SyncJob is not enabled
+2018-08-09 15:05:03,498 scheduler.py[line:73] WARNING RiceQuant-1-FollowingJob is not enabled
+2018-08-09 15:05:03,498 scheduler.py[line:73] WARNING Uqer-1-FollowingJob is not enabled
+2018-08-09 15:05:03,499 scheduler.py[line:73] WARNING Guorn-1-SyncJob is not enabled
+2018-08-09 15:05:03,500 base.py[line:867] INFO    Added job "NewStocks-Job" to job store "default"
+2018-08-09 15:05:03,501 base.py[line:867] INFO    Added job "UpdateInfoJob-Job" to job store "default"
+2018-08-09 15:05:03,502 base.py[line:867] INFO    Added job "GridJob-Job" to job store "default"
+2018-08-09 15:05:03,502 base.py[line:159] INFO    Scheduler started
+2018-08-09 15:06:21,808 base.py[line:191] INFO    Scheduler has been shut down
+2018-08-09 15:06:25,822 scheduler.py[line:39] INFO    Config path: C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\conf\scheduler.ini
+2018-08-09 15:06:25,999 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 15:06:26,000 update_info_job.py[line:14] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 15:06:26,001 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 15:06:26,001 grid_job.py[line:16] INFO    C:\ProgramData\Anaconda3\lib\site-packages\shipane_sdk\db\Trader.db
+2018-08-09 15:06:26,002 base.py[line:433] INFO    Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2018-08-09 15:06:26,003 scheduler.py[line:73] WARNING ConvertibleBonds-Job is not enabled
+2018-08-09 15:06:26,003 scheduler.py[line:73] WARNING Repo-Job is not enabled
+2018-08-09 15:06:26,004 scheduler.py[line:73] WARNING Batch-Job is not enabled
+2018-08-09 15:06:26,005 scheduler.py[line:73] WARNING JoinQuant-1-FollowingJob is not enabled
+2018-08-09 15:06:26,005 scheduler.py[line:73] WARNING JoinQuantArena-1-SyncJob is not enabled
+2018-08-09 15:06:26,006 scheduler.py[line:73] WARNING RiceQuant-1-FollowingJob is not enabled
+2018-08-09 15:06:26,006 scheduler.py[line:73] WARNING Uqer-1-FollowingJob is not enabled
+2018-08-09 15:06:26,007 scheduler.py[line:73] WARNING Guorn-1-SyncJob is not enabled
+2018-08-09 15:06:26,008 base.py[line:867] INFO    Added job "NewStocks-Job" to job store "default"
+2018-08-09 15:06:26,009 base.py[line:867] INFO    Added job "UpdateInfoJob-Job" to job store "default"
+2018-08-09 15:06:26,009 base.py[line:867] INFO    Added job "GridJob-Job" to job store "default"
+2018-08-09 15:06:26,010 base.py[line:159] INFO    Scheduler started
+2018-08-09 15:06:30,014 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:06:40 CST)" (scheduled at 2018-08-09 15:06:30+08:00)
+2018-08-09 15:06:30,044 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=********
+2018-08-09 15:06:30,168 client.py[line:284] INFO    Response:
+200 OK
+{"count":25,"dataTable":{"columns":["委托日期","证券代码","证券名称","操作","委托价格","委托数量","委托时间","成交数量","成交均价","合同编号","交易市场","股东帐户","备注"],"rows":[["20180809","159915","创业板","卖出","1.446","1400","08:50:43","0","0.000","390","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.417","1400","08:51:10","1400","1.417","392","深圳Ａ","0237889997","已成(买卖)"],["20180809","159915","创业板","买入","1.361","1500","08:52:16","0","0.000","399","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.334","1500","08:52:40","0","0.000","400","深圳Ａ","0237889997","已报(买卖)"],["20180809","510300","300ETF","卖出","3.473","600","08:53:17","0","0.000","401","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.336","600","08:53:56","0","0.000","403","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.269","600","08:54:23","0","0.000","404","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","卖出","5.311","400","08:54:46","400","5.311","405","上海Ａ","A171193633","已成(买卖)"],["20180809","510500","500ETF","卖出","5.419","400","08:55:00","0","0.000","407","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","5.101","400","08:55:29","0","0.000","408","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","4.999","400","08:55:42","0","0.000","409","上海Ａ","A171193633","已报(买卖)"],["20180809","601088","中国神华","卖出","18.810","200","08:56:21","0","0.000","410","上海Ａ","A171193633","已报(买卖)"],["20180809","000402","金 融 街","卖出","7.440","700","08:57:01","0","0.000","411","深圳Ａ","0237889997","已报(买卖)"],["20180809","600219","南山铝业","卖出","2.920","1000","08:57:28","0","0.000","412","上海Ａ","A171193633","已报(买卖)"],["20180809","110044","广电转债","卖出","95.000","4","08:58:18","4","95.000","414","上海Ａ","A171193633","已成(买卖)"],["20180809","510880","红利ETF","买入","2.626","800","09:07:51","0","0.000","454","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.481","800","09:22:46","0","0.000","544","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","买入","1.389","1500","10:39:36","0","0.000","7559","深圳Ａ","0237889997","已报(买卖)"],["20180809","510500","500ETF","买入","5.205","400","10:50:18","0","0.000","8086","上海Ａ","A171193633","已报(买卖)"],["20180809","510880","红利ETF","买入","2.668","800","10:51:51","0","0.000","8168","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.532","800","10:54:26","0","0.000","8292","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:10:58","0","0.000","12146","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:12:48","0","0.000","12210","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:13:58","0","0.000","12249","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.380","100","14:23:49","0","0.000","12646","深圳Ａ","0237889997","已报(买卖)"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:06:30"}
+2018-08-09 15:06:30,283 grid_job.py[line:40] INFO    159915 current price is 1.426
+2018-08-09 15:06:30,286 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=392
+2018-08-09 15:06:30,290 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=405
+2018-08-09 15:06:30,292 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=414
+2018-08-09 15:06:30,295 grid_job.py[line:67] INFO    1.42 is on trading
+2018-08-09 15:06:30,296 base.py[line:144] INFO    Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:06:40 CST)" executed successfully
+2018-08-09 15:06:40,007 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:06:50 CST)" (scheduled at 2018-08-09 15:06:40+08:00)
+2018-08-09 15:06:40,035 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=********
+2018-08-09 15:06:40,169 client.py[line:284] INFO    Response:
+200 OK
+{"count":25,"dataTable":{"columns":["委托日期","证券代码","证券名称","操作","委托价格","委托数量","委托时间","成交数量","成交均价","合同编号","交易市场","股东帐户","备注"],"rows":[["20180809","159915","创业板","卖出","1.446","1400","08:50:43","0","0.000","390","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.417","1400","08:51:10","1400","1.417","392","深圳Ａ","0237889997","已成(买卖)"],["20180809","159915","创业板","买入","1.361","1500","08:52:16","0","0.000","399","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.334","1500","08:52:40","0","0.000","400","深圳Ａ","0237889997","已报(买卖)"],["20180809","510300","300ETF","卖出","3.473","600","08:53:17","0","0.000","401","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.336","600","08:53:56","0","0.000","403","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.269","600","08:54:23","0","0.000","404","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","卖出","5.311","400","08:54:46","400","5.311","405","上海Ａ","A171193633","已成(买卖)"],["20180809","510500","500ETF","卖出","5.419","400","08:55:00","0","0.000","407","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","5.101","400","08:55:29","0","0.000","408","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","4.999","400","08:55:42","0","0.000","409","上海Ａ","A171193633","已报(买卖)"],["20180809","601088","中国神华","卖出","18.810","200","08:56:21","0","0.000","410","上海Ａ","A171193633","已报(买卖)"],["20180809","000402","金 融 街","卖出","7.440","700","08:57:01","0","0.000","411","深圳Ａ","0237889997","已报(买卖)"],["20180809","600219","南山铝业","卖出","2.920","1000","08:57:28","0","0.000","412","上海Ａ","A171193633","已报(买卖)"],["20180809","110044","广电转债","卖出","95.000","4","08:58:18","4","95.000","414","上海Ａ","A171193633","已成(买卖)"],["20180809","510880","红利ETF","买入","2.626","800","09:07:51","0","0.000","454","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.481","800","09:22:46","0","0.000","544","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","买入","1.389","1500","10:39:36","0","0.000","7559","深圳Ａ","0237889997","已报(买卖)"],["20180809","510500","500ETF","买入","5.205","400","10:50:18","0","0.000","8086","上海Ａ","A171193633","已报(买卖)"],["20180809","510880","红利ETF","买入","2.668","800","10:51:51","0","0.000","8168","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.532","800","10:54:26","0","0.000","8292","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:10:58","0","0.000","12146","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:12:48","0","0.000","12210","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:13:58","0","0.000","12249","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.380","100","14:23:49","0","0.000","12646","深圳Ａ","0237889997","已报(买卖)"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:06:40"}
+2018-08-09 15:06:40,276 grid_job.py[line:40] INFO    159915 current price is 1.426
+2018-08-09 15:06:40,279 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=392
+2018-08-09 15:06:40,283 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=405
+2018-08-09 15:06:40,287 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=414
+2018-08-09 15:06:40,292 grid_job.py[line:67] INFO    1.42 is on trading
+2018-08-09 15:06:40,294 base.py[line:144] INFO    Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:06:50 CST)" executed successfully
+2018-08-09 15:06:50,005 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:07:00 CST)" (scheduled at 2018-08-09 15:06:50+08:00)
+2018-08-09 15:06:50,033 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=********
+2018-08-09 15:06:50,191 client.py[line:284] INFO    Response:
+200 OK
+{"count":25,"dataTable":{"columns":["委托日期","证券代码","证券名称","操作","委托价格","委托数量","委托时间","成交数量","成交均价","合同编号","交易市场","股东帐户","备注"],"rows":[["20180809","159915","创业板","卖出","1.446","1400","08:50:43","0","0.000","390","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.417","1400","08:51:10","1400","1.417","392","深圳Ａ","0237889997","已成(买卖)"],["20180809","159915","创业板","买入","1.361","1500","08:52:16","0","0.000","399","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.334","1500","08:52:40","0","0.000","400","深圳Ａ","0237889997","已报(买卖)"],["20180809","510300","300ETF","卖出","3.473","600","08:53:17","0","0.000","401","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.336","600","08:53:56","0","0.000","403","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.269","600","08:54:23","0","0.000","404","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","卖出","5.311","400","08:54:46","400","5.311","405","上海Ａ","A171193633","已成(买卖)"],["20180809","510500","500ETF","卖出","5.419","400","08:55:00","0","0.000","407","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","5.101","400","08:55:29","0","0.000","408","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","4.999","400","08:55:42","0","0.000","409","上海Ａ","A171193633","已报(买卖)"],["20180809","601088","中国神华","卖出","18.810","200","08:56:21","0","0.000","410","上海Ａ","A171193633","已报(买卖)"],["20180809","000402","金 融 街","卖出","7.440","700","08:57:01","0","0.000","411","深圳Ａ","0237889997","已报(买卖)"],["20180809","600219","南山铝业","卖出","2.920","1000","08:57:28","0","0.000","412","上海Ａ","A171193633","已报(买卖)"],["20180809","110044","广电转债","卖出","95.000","4","08:58:18","4","95.000","414","上海Ａ","A171193633","已成(买卖)"],["20180809","510880","红利ETF","买入","2.626","800","09:07:51","0","0.000","454","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.481","800","09:22:46","0","0.000","544","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","买入","1.389","1500","10:39:36","0","0.000","7559","深圳Ａ","0237889997","已报(买卖)"],["20180809","510500","500ETF","买入","5.205","400","10:50:18","0","0.000","8086","上海Ａ","A171193633","已报(买卖)"],["20180809","510880","红利ETF","买入","2.668","800","10:51:51","0","0.000","8168","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.532","800","10:54:26","0","0.000","8292","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:10:58","0","0.000","12146","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:12:48","0","0.000","12210","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:13:58","0","0.000","12249","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.380","100","14:23:49","0","0.000","12646","深圳Ａ","0237889997","已报(买卖)"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:06:50"}
+2018-08-09 15:06:50,305 grid_job.py[line:40] INFO    159915 current price is 1.426
+2018-08-09 15:06:50,307 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=392
+2018-08-09 15:06:50,311 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=405
+2018-08-09 15:06:50,315 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=414
+2018-08-09 15:06:50,320 grid_job.py[line:67] INFO    1.42 is on trading
+2018-08-09 15:06:50,322 base.py[line:144] INFO    Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:07:00 CST)" executed successfully
+2018-08-09 15:07:00,006 base.py[line:123] INFO    Running job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:07:10 CST)" (scheduled at 2018-08-09 15:07:00+08:00)
+2018-08-09 15:07:00,034 client.py[line:277] INFO    Request:
+GET /orders?status=&client=account%3A666628719640&key=********
+2018-08-09 15:07:00,173 client.py[line:284] INFO    Response:
+200 OK
+{"count":25,"dataTable":{"columns":["委托日期","证券代码","证券名称","操作","委托价格","委托数量","委托时间","成交数量","成交均价","合同编号","交易市场","股东帐户","备注"],"rows":[["20180809","159915","创业板","卖出","1.446","1400","08:50:43","0","0.000","390","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.417","1400","08:51:10","1400","1.417","392","深圳Ａ","0237889997","已成(买卖)"],["20180809","159915","创业板","买入","1.361","1500","08:52:16","0","0.000","399","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.334","1500","08:52:40","0","0.000","400","深圳Ａ","0237889997","已报(买卖)"],["20180809","510300","300ETF","卖出","3.473","600","08:53:17","0","0.000","401","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.336","600","08:53:56","0","0.000","403","上海Ａ","A171193633","已报(买卖)"],["20180809","510300","300ETF","买入","3.269","600","08:54:23","0","0.000","404","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","卖出","5.311","400","08:54:46","400","5.311","405","上海Ａ","A171193633","已成(买卖)"],["20180809","510500","500ETF","卖出","5.419","400","08:55:00","0","0.000","407","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","5.101","400","08:55:29","0","0.000","408","上海Ａ","A171193633","已报(买卖)"],["20180809","510500","500ETF","买入","4.999","400","08:55:42","0","0.000","409","上海Ａ","A171193633","已报(买卖)"],["20180809","601088","中国神华","卖出","18.810","200","08:56:21","0","0.000","410","上海Ａ","A171193633","已报(买卖)"],["20180809","000402","金 融 街","卖出","7.440","700","08:57:01","0","0.000","411","深圳Ａ","0237889997","已报(买卖)"],["20180809","600219","南山铝业","卖出","2.920","1000","08:57:28","0","0.000","412","上海Ａ","A171193633","已报(买卖)"],["20180809","110044","广电转债","卖出","95.000","4","08:58:18","4","95.000","414","上海Ａ","A171193633","已成(买卖)"],["20180809","510880","红利ETF","买入","2.626","800","09:07:51","0","0.000","454","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.481","800","09:22:46","0","0.000","544","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","买入","1.389","1500","10:39:36","0","0.000","7559","深圳Ａ","0237889997","已报(买卖)"],["20180809","510500","500ETF","买入","5.205","400","10:50:18","0","0.000","8086","上海Ａ","A171193633","已报(买卖)"],["20180809","510880","红利ETF","买入","2.668","800","10:51:51","0","0.000","8168","上海Ａ","A171193633","已报(买卖)"],["20180809","510050","50ETF","买入","2.532","800","10:54:26","0","0.000","8292","上海Ａ","A171193633","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:10:58","0","0.000","12146","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:12:48","0","0.000","12210","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","卖出","1.500","100","14:13:58","0","0.000","12249","深圳Ａ","0237889997","已报(买卖)"],["20180809","159915","创业板","买入","1.380","100","14:23:49","0","0.000","12646","深圳Ａ","0237889997","已报(买卖)"]]},"startDate":"1970-01-01T08:00:00","endDate":"1970-01-01T08:00:00","updateDate":"2018-08-09T15:07:00"}
+2018-08-09 15:07:00,283 grid_job.py[line:40] INFO    159915 current price is 1.426
+2018-08-09 15:07:00,286 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=392
+2018-08-09 15:07:00,290 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=405
+2018-08-09 15:07:00,292 grid_job.py[line:52] INFO    update grid_159915 set hold=0,contract_number=0 where contract_number=414
+2018-08-09 15:07:00,295 grid_job.py[line:67] INFO    1.42 is on trading
+2018-08-09 15:07:00,297 base.py[line:144] INFO    Job "GridJob-Job (trigger: cron[year='*', month='*', day='*', week='*', day_of_week='mon-fri', hour='9-16', minute='*', second='*/10'], next run at: 2018-08-09 15:07:10 CST)" executed successfully
+2018-08-09 15:07:09,792 base.py[line:191] INFO    Scheduler has been shut down

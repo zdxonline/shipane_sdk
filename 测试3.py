@@ -1,3 +1,7 @@
 
 
-print('{} sss {} fff'.format('111','2222'))
+import easyquotation
+quotation = easyquotation.use('sina')
+stock_id='159915'
+current_price = quotation.real(stock_id)[stock_id]['now']
+print(current_price)

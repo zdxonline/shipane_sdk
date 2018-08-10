@@ -6,7 +6,7 @@ import time
 from urllib3 import request
 from shipane_sdk.jobs.basic_job import BasicJob
 
-STOCKS = ['159915']
+STOCKS = ['159915','510500','510300','510880']
 MSG_SERVER_KER = 'SCU27710T4231a38048a591265edaa5db7ec33bdb5b1b3a12e8040'
 
 
@@ -21,7 +21,7 @@ class GridJob(BasicJob):
 
     def __call__(self):
         if not self._can_run:
-            self._logger('something is wrong ,please check it first')
+            self._logger.error('something is wrong ,please check it first')
             return
         for client_alias in self._client_aliases:
             try:
@@ -62,41 +62,41 @@ class GridJob(BasicJob):
                             self._logger.info(update_sql)
                             cursor.execute(update_sql)
 
-                    for i, grid in enumerate(grids):
-                        if current_price < float(grid[0]):  # 一直找到小于等于当前价格的格子
+                    for i in range(len(grids)):
+                        if current_price < float(grids[i][0]):  # 一直找到小于等于当前价格的格子
                             continue
-
-                        if int(grid[2]) > 0:  # 如何合同编号不为0，则表明该格子在交易中，直接返回
-                            self._logger.info('%s is on trading' % grid[0])
-                            break
-
-                        if int(grid[1]) > 0:  # 如果持有量大于0，说明可以卖出
-                            sell_args = {"symbol": stock_id, "priceType": 0, "price": grid[0], "amount": 100}
-                            self._logger.info('sell ', sell_args)
-                            self._client.sell(**sell_args)
-                            for _ in range(20):  # 最多等20秒返回新的委托列表
-                                new_orders = self._client.get_orders().sort_values(by='委托时间')
-                                if (len(new_orders) > len(orders)):
-                                    contract_number = new_orders.loc[len(new_orders) - 1, '合同编号']
-                                    update_sql = 'update grid_%s set contract_number=%s where price=%s' % (
-                                        stock_id, contract_number, grid[0])
-                                    self._logger.info(update_sql)
-                                    cursor.execute(update_sql)
-                                    break
-                                time.sleep(1)
-                        else:  # 否则应该买入
-                            buy_args = {"symbol": stock_id, "priceType": 0, "price": grid[0], "amount": 100}
-                            client.buy(**buy_args)
-                            for _ in range(20):
-                                new_orders = self._client.get_orders().sort_values(by='委托时间')
-                                if (len(new_orders) > len(orders)):
-                                    contract_number = new_orders.loc[len(new_orders) - 1, '合同编号']
-                                    update_sql = 'update grid_%s set contract_number=%s where price=%s' % (
-                                        stock_id, contract_number, grid[0])
-                                    self._logger.info(update_sql)
-                                    cursor.execute(update_sql)
-                                    break
-                                time.sleep(1)
+                        for j in range(3):
+                            grid=grids[i+j]
+                            if int(grid[2]) > 0:  # 如何合同编号不为0，则表明该格子在交易中，直接返回
+                                self._logger.info('%s is on trading' % grid[0])
+                                continue
+                            if int(grid[1]) > 0:  # 如果持有量大于0，说明可以卖出
+                                sell_args = {"symbol": stock_id, "priceType": 0, "price": grids[i-1][0], "amount": 100}
+                                self._logger.info('sell ', sell_args)
+                                self._client.sell(**sell_args)
+                                for _ in range(20):  # 最多等20秒返回新的委托列表
+                                    new_orders = self._client.get_orders().sort_values(by='委托时间')
+                                    if (len(new_orders) > len(orders)):
+                                        contract_number = new_orders.loc[len(new_orders) - 1, '合同编号']
+                                        update_sql = 'update grid_%s set contract_number=%s where price=%s' % (
+                                            stock_id, contract_number, grid[0])
+                                        self._logger.info(update_sql)
+                                        cursor.execute(update_sql)
+                                        break
+                                    time.sleep(1)
+                            else:  # 否则应该买入
+                                buy_args = {"symbol": stock_id, "priceType": 0, "price": grid[0], "amount": 100}
+                                self._client.buy(**buy_args)
+                                for _ in range(20):
+                                    new_orders = self._client.get_orders().sort_values(by='委托时间')
+                                    if (len(new_orders) > len(orders)):
+                                        contract_number = new_orders.loc[len(new_orders) - 1, '合同编号']
+                                        update_sql = 'update grid_%s set contract_number=%s where price=%s' % (
+                                            stock_id, contract_number, grid[0])
+                                        self._logger.info(update_sql)
+                                        cursor.execute(update_sql)
+                                        break
+                                    time.sleep(1)
                         break  # 后续的格子不再处理
                 conn.commit()
                 conn.close()
